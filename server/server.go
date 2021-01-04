@@ -11,6 +11,7 @@ func main() {
 
 	http.HandleFunc("/hi", func(w http.ResponseWriter, r *http.Request) {
 		fmt.Fprintf(w, "Hi")
+		log.Print("Said hi for %s", r.RemoteAddr)
 	})
 
 	log.Print("Now serving on localhost:8080...")
