@@ -5,5 +5,5 @@ load("@io_bazel_rules_sass//:defs.bzl", "sass_binary")
 sass_binary(
     name = "styles",
     src = "styles.scss",
-    output_dir = "../css",
+    visibility = ["//new_public:__pkg__"],
 )
