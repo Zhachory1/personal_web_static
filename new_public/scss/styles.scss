@@ -447,6 +447,15 @@ footer {
     }
 }
 
+#profile-image {
+    img {
+        max-width: 150px;
+        border-radius: 50%;
+        border-bottom: 1px solid $border;
+        margin: 0 0 30px 0;
+    }
+}
+
 /*
     --------------------------------
     ----- 6. Experience Styles -----
