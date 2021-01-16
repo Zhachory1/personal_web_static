@@ -30,7 +30,7 @@ pkg_tar(
 container_image(
     name = "web_server_image",
     base = "@alpine_linux_amd64//image",
-    # entrypoint = ["./server"],
+    entrypoint = ["./server"],
     tars = [":web_server_tar"],
 )
 
