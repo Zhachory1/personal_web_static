@@ -5,6 +5,7 @@ pkg_web(
     srcs = [
         "favicon.ico",
         "index.html",
+        "ZhachResume.pdf",
         "//new_public/css:bootstrap.min.css",
         "//new_public/scss:styles",
         "//new_public/js:main_bin",

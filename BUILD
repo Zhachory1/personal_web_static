@@ -18,7 +18,6 @@ genrule(
 pkg_tar(
     name = "web_server_tar",
     extension = "tar.gz",
-    # strip_prefix = "/server",
     srcs = [
         ":pull_favicon_to_root",
         ":pull_index_to_root",
@@ -31,7 +30,7 @@ pkg_tar(
 container_image(
     name = "web_server_image",
     base = "@alpine_linux_amd64//image",
-    entrypoint = ["./server_/server"],
+    # entrypoint = ["./server"],
     tars = [":web_server_tar"],
 )
 
