@@ -35,6 +35,7 @@ If you don't have this, you're doing it wrong.
 With these commands, I can test locally, test with a docker binary, and release things into docker.
 
 # Notes
+## Firewall
 For the server, make sure you set up the firewall correctly to test:
 
 ```
@@ -46,3 +47,15 @@ ufw allow 8080
 ufw reset
 ufw disable
 ```
+
+## SSL Setup
+This was the worst headache.
+
+Followed the guide here:
+
+https://www.digitalocean.com/community/tutorials/how-to-secure-a-containerized-node-js-application-with-nginx-let-s-encrypt-and-docker-compose
+
+We basically set up a docker-compose to run nginx as a proxy to serve and load balance and route things.
+
+Also has instructions to recreate certifications when they expire.
+
