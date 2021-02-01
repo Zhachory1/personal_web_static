@@ -15,12 +15,20 @@ genrule(
     cmd = "cat $(locations //new_public:public)/favicon.ico > $@",
 )
 
+genrule(
+    name = "pull_sitemap_to_root",
+    srcs = ["//new_public:public"],
+    outs = ["sitemap.xml"],
+    cmd = "cat $(locations //new_public:public)/sitemap.xml > $@",
+)
+
 pkg_tar(
     name = "web_server_tar",
     extension = "tar.gz",
     srcs = [
         ":pull_favicon_to_root",
         ":pull_index_to_root",
+        ":pull_sitemap_to_root",
         "//server",
         "//new_public:public",
     ],
