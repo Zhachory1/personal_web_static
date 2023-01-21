@@ -4,5 +4,5 @@ filegroup(
         "*.jpg",
         "*.png"
     ]),
-    visibility = ["//new_public:__pkg__"],
+    visibility = ["//public:__pkg__"],
 )

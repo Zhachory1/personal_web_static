@@ -3,42 +3,42 @@ load("@io_bazel_rules_docker//container:container.bzl", "container_image", "cont
 
 genrule(
     name = "pull_index_to_root",
-    srcs = ["//new_public:public"],
+    srcs = ["//public:public"],
     outs = ["index.html"],
-    cmd = "cat $(locations //new_public:public)/index.html > $@",
+    cmd = "cat $(locations //public:public)/index.html > $@",
 )
 
 genrule(
     name = "pull_favicon_to_root",
-    srcs = ["//new_public:public"],
+    srcs = ["//public:public"],
     outs = ["favicon.ico"],
-    cmd = "cat $(locations //new_public:public)/favicon.ico > $@",
+    cmd = "cat $(locations //public:public)/favicon.ico > $@",
 )
 
 genrule(
     name = "pull_sitemap_to_root",
-    srcs = ["//new_public:public"],
+    srcs = ["//public:public"],
     outs = ["sitemap.xml"],
-    cmd = "cat $(locations //new_public:public)/sitemap.xml > $@",
+    cmd = "cat $(locations //public:public)/sitemap.xml > $@",
 )
 
 pkg_tar(
     name = "web_server_tar",
-    extension = "tar.gz",
+    extension = "tar",
     srcs = [
         ":pull_favicon_to_root",
         ":pull_index_to_root",
         ":pull_sitemap_to_root",
-        "//server",
-        "//new_public:public",
+        "//server:server",
+        "//public:public",
     ],
     mode = "0755",
 )
 
 container_image(
     name = "web_server_image",
-    base = "@alpine_linux_amd64//image",
-    entrypoint = ["./server"],
+    base = "@debian//image",
+    entrypoint = "./server",
     tars = [":web_server_tar"],
 )
 
@@ -48,4 +48,5 @@ container_push(
     image = ":web_server_image",
     registry = "index.docker.io",
     repository = "zhachory1/perso-web-server",
+    tag="latest",
 )

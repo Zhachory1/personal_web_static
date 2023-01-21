@@ -16,5 +16,5 @@ closure_js_binary(
     name = "main_bin",
     deps = [":main_lib"],
     compilation_level = "SIMPLE",
-    visibility = ["//new_public:__pkg__"],
+    visibility = ["//public:__pkg__"],
 )

@@ -1,45 +1,273 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="no-js" lang="en">
+
 <head>
-
-  <!-- Basic Page Needs
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta charset="utf-8">
-  <title>Zhachory Volker Test</title>
-  <meta name="description" content="">
-  <meta name="author" content="">
-
-  <!-- Mobile Specific Metas
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- FONT
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
-
-  <!-- CSS
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/skeleton.css">
-
-  <!-- Favicon
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="icon" type="image/png" href="images/favicon.ico">
-
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="My name is Zhachory Volker. I have 12+ years of full stack and 6+ years of ML experience. ML and Mis-info are topics I work on.">
+    <meta name="author" content="">
+    <title>Zhach's Portfolio</title>
+	<link rel="shortcut icon" href="/public/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="/public/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="/public/libs/font-awesome/css/font-awesome.min.css">
+    <link href="/public/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/public/scss/styles.css" rel="stylesheet">
 </head>
+
 <body>
-
-  <!-- Primary Page Layout
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <div class="container">
-    <div class="row">
-      <div class="one-half column" style="margin-top: 25%">
-        <h4>Basic Page</h4>
-        <p>This index.html page is a placeholder with the CSS, font and favicon. It's just waiting for you to add some content! If you need some help hit up the <a href="http://www.getskeleton.com">Skeleton documentation</a>.</p>
-      </div>
+    <div id="mobile-menu-open" class="shadow-large">
+        <i class="fa fa-bars" aria-hidden="true"></i>
     </div>
-  </div>
+    <!-- End #mobile-menu-toggle -->
+    <header>
+        <div id="mobile-menu-close">
+            <span>Close</span> <i class="fa fa-times" aria-hidden="true"></i>
+        </div>
+        <ul id="menu" class="shadow">
+            <li>
+                <a href="#about">About</a>
+            </li>
+            <li>
+                <a href="#experience">Experience</a>
+            </li>
+            <li>
+                <a href="#education">Education</a>
+            </li>
+            <li>
+                <a href="#projects">Projects</a>
+            </li>
+            <li>
+                <a href="#skills">Skills</a>
+            </li>
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
+        </ul>
+    </header>
+    <!-- End header -->
 
-<!-- End Document
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <div id="lead">
+        <div id="lead-content">
+            <h1>Zhachory Volker</h1>
+            <h2>Software Engineer</h2>
+            <a href="/public/ZhachResume.pdf" class="btn-rounded-white">Download Resume</a>
+        </div>
+        <!-- End #lead-content -->
+
+        <div id="lead-overlay"></div>
+
+        <div id="lead-down">
+            <span>
+                <i class="fa fa-chevron-down" aria-hidden="true"></i>
+            </span>
+        </div>
+        <!-- End #lead-down -->
+    </div>
+    <!-- End #lead -->
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <h2 class="heading">About Me</h2>
+                </div>
+                <div class="col-md-3" id="profile-image">
+                    <img alt="Zhach's Selfie" src="/public/images/profile.png"></img>
+                </div>
+                <div class="col-md-6">
+                    <p>
+                        I am a Software Engineer with 12+ years of full stack experience, 6+ years in graphic design, and 6+ years of data mining. I am expanding my knowledge toward Machine Learning and Mis-information. I enjoy learning new things every day, and I always give my 100% in everything I do. I aim to become a Researcher in AI/ML in the near future. I would like to focus on Graph Learning and Time Series Analysis for News applications.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End #about -->
+
+    <div id="experience" class="background-alt">
+        <h2 class="heading">Experience</h2>
+        <div id="experience-timeline">
+            <div data-date="March 2018 – Present">
+                <h3>YouTube</h3>
+                <h4>Software Engineer</h4>
+                <p>
+                    Working on a multi-faceted team. We create features and metrics in Go for evaluate ranking systems. We maintain and improve multiple mapreduce pipelines to create aggregated logs that calculate ranking metrics to be used for enhancing users’ experience. And we improve the News experience on YouTube Search using clustering algorithms, NLP models, and scalable infrastructure.
+                </p>
+            </div>
+
+            <div data-date="March 2017 – March 2018">
+                <h3>Google</h3>
+                <h4>Software Engineering Resident</h4>
+                <p>
+                    Spent a full year learning Google technologies and rotating with two different teams. In one research team, I worked with NLP and ML with C++ and Python to attach questions to answers/doc space. In the other team, I maintained and added features, like label prop and semi supervised algorithms, to a library made for graph mining for all of Google to use.
+                </p>
+            </div>
+
+            <div data-date="May 2015 – March 2017">
+                <h3>Ericsson</h3>
+                <h4>System Data & Performance Intern</h4>
+                <p>
+                    Developed and maintained full-stack applications and systems to simplify Ericsson’s processes and routines in Polymer/other web frameworks and Python/Java. Managed databases with PostgreSQL, MySQL, Cassandra, MongoDB, and HBase for multiple applications across multiple servers. Mined data from these databases to predict site mis-handlements and suggest possible solutions. Managed computer systems with Hadoop, Linux, and Windows. Created internal marketing campaigns with videos, newsletters, and programs.
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- End #experience -->
+
+    <div id="education">
+        <h2 class="heading">Education</h2>
+        <div class="education-block">
+            <h3>University of North Texas</h3>
+            <span class="education-date">August 2013 - May 2018</span>
+            <h4>Bachelor of Science in Computer Science</h4>
+            <ul>
+                <li>
+                    <b>Relevant Coursework:</b> Advanced Algorithms, Data
+                    Structures, Software Engineering, Discrete Math, Game
+                    Mechanics, Operating Systems, Artificial Intelligence
+                </li>
+                <li>
+                    <b>Dean's list:</b> Fall 2013, Spring 2015, Fall 2015, Spring 2016
+                </li>
+                <li>
+                    <b>GPA:</b> 3.443
+                </li>
+            </ul>
+        </div>
+        <!-- End .education-block -->
+    </div>
+    <!-- End #education -->
+
+    <div id="projects" class="background-alt">
+        <h2 class="heading">Projects</h2>
+        <div class="container">
+            <div class="row">
+                <div class="project shadow-large">
+                    <div class="project-image">
+                        <img src="https://img.freepik.com/premium-vector/news-concept-illustration-flat-design_23-2148268772.jpg?w=300" />
+                    </div>
+                    <!-- End .project-image -->
+                    <div class="project-info">
+                        <h3>News Summarizer</h3>
+                        <p>
+                            A simple summarizer for a news article. Simply add a url
+                            of a news article and it will provide a short summary and
+                            some metadata about the story.
+                        </p>
+                        <a href="/news">View Project</a>
+                    </div>
+                    <!-- End .project-info -->
+                </div>
+                <!-- End .project -->
+                <div class="project shadow-large">
+                    <div class="project-image">
+                        <img src="/public/images/project.jpg" />
+                    </div>
+                    <!-- End .project-image -->
+                    <div class="project-info">
+                        <h3>Projects Coming Soon</h3>
+                        <p>
+                            I have a lot of ideas for projects, I just have to
+                            visualize it for everyone to see. :)
+                        </p>
+                        <a href="#">View Project</a>
+                    </div>
+                    <!-- End .project-info -->
+                </div>
+                <!-- End .project -->
+            </div>
+        </div>
+    </div>
+    <!-- End #projects -->
+
+    <div id="skills">
+        <h2 class="heading">Skills</h2>
+        <ul>
+            <li>JavaScript</li>
+            <li>Python</li>
+            <li>Go</li>
+            <li>Node.js</li>
+            <li>AngularJs</li>
+            <li>Java</li>
+            <li>C</li>
+            <li>C++</li>
+            <li>OOP</li>
+            <li>Machine Learning</li>
+            <li>Map-Reduce</li>
+            <li>Full-Stack</li>
+            <li>NLP</li>
+            <li>Graph ML</li>
+            <li>Genetic Algorithms</li>
+            <li>Test-Driven Development</li>
+            <li>Reinforcement Learning</li>
+            <li>Tensorflow</li>
+            <li>Hadoop</li>
+            <li>Project Management</li>
+            <li>Git and Mercurial</li>
+        </ul>
+    </div>
+    <!-- End #skills -->
+
+    <div id="contact">
+        <h2>Get in Touch</h2>
+        <div id="contact-form">
+            <form
+              action="https://formspree.io/f/xknpklwr"
+              method="POST"
+            >
+              <label>
+                Your email:
+                <input type="text" name="_replyto">
+              </label>
+              <label>
+                Your message:
+                <textarea name="message"></textarea>
+              </label>
+
+              <!-- your other form fields go here -->
+
+              <button type="submit">Send</button>
+            </form>
+        </div>
+        <!-- End #contact-form -->
+    </div>
+    <!-- End #contact -->
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-5 copyright">
+                    <p>
+                        Copyright &copy; 2023 ZHACHORY VOLKER
+                    </p>
+                </div>
+                <div class="col-sm-2 top">
+                    <span id="to-top">
+                        <i class="fa fa-chevron-up" aria-hidden="true"></i>
+                    </span>
+                </div>
+                <div class="col-sm-5 social">
+                    <ul>
+                        <li>
+                            <a href="https://github.com/Zhachory1" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/zhachory1/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/zhachory1" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End footer -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="/public/js/main_bin.js"></script>
 </body>
+
+</html>
