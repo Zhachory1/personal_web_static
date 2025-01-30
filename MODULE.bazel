@@ -10,8 +10,8 @@ module(
 bazel_dep(name = "rules_go", version = "0.52.0")
 bazel_dep(name = "gazelle", version = "0.42.0")
 
-load("@io_bazel_rules_go//go:deps.bzl", "go_register_toolchains", "go_rules_dependencies")
-load("@bazel_gazelle//:deps.bzl", "gazelle_dependencies", "go_repository")
+load("@rules_go//go:deps.bzl", "go_register_toolchains", "go_rules_dependencies")
+load("@gazelle//:deps.bzl", "gazelle_dependencies", "go_repository")
 go_rules_dependencies()
 go_register_toolchains(version = "1.19.3")
 gazelle_dependencies()
@@ -40,33 +40,6 @@ rules_pkg_dependencies()
 bazel_dep(name = "rules_python", version = "1.1.0")
 
 ###################
-# Docker Rules    #
-###################
-http_archive(
-    name = "io_bazel_rules_docker",
-    sha256 = "b1e80761a8a8243d03ebca8845e9cc1ba6c82ce7c5179ce2b295cd36f7e394bf",
-    urls = ["https://github.com/bazelbuild/rules_docker/releases/download/v0.24.0/rules_docker-v0.24.0.tar.gz"],
-) 
-
-load(
-    "@io_bazel_rules_docker//repositories:repositories.bzl",
-    container_repositories = "repositories",
-)
-container_repositories()
-
-load("@io_bazel_rules_docker//repositories:deps.bzl", container_deps = "deps")
-container_deps()
-
-load("@io_bazel_rules_docker//container:pull.bzl", "container_pull")
-container_pull(
-    name = "debian",
-    registry = "index.docker.io",
-    repository = "library/debian",
-    tag = "stable-slim",
-    digest = "sha256:9554f6caf2cafc99ad9873a822e1aafbb29d40608fe7ebe6569365b80fa5a422"
-)
-
-###################
 # JS Rules        #
 ###################
 http_archive(
@@ -86,33 +59,23 @@ rules_closure_toolchains()
 ###################
 # Sass Rules      #
 ###################
-http_archive(
-    name = "io_bazel_rules_sass",
-    # Make sure to check for the latest version when you install
-    url = "https://github.com/bazelbuild/rules_sass/archive/1.56.0.zip",
-    strip_prefix = "rules_sass-1.56.0",
-    # sha256 = "9dcfba04e4af896626f4760d866f895ea4291bc30bf7287887cefcf4707b6a62",
-)
+bazel_dep(name = "gzgz_rules_sass", version = "1.0.0")
 
-http_archive(
-    name = "build_bazel_rules_nodejs",
-    sha256 = "c077680a307eb88f3e62b0b662c2e9c6315319385bc8c637a861ffdbed8ca247",
-    urls = ["https://github.com/bazelbuild/rules_nodejs/releases/download/5.8.0/rules_nodejs-5.8.0.tar.gz"],
-)
+bazel_dep(name = "rules_nodejs", version = "6.3.3")
 
-load("@build_bazel_rules_nodejs//:repositories.bzl", "build_bazel_rules_nodejs_dependencies")
+load("@rules_nodejs//:repositories.bzl", "build_bazel_rules_nodejs_dependencies")
 build_bazel_rules_nodejs_dependencies()
 
 # fetches nodejs, npm, and yarn
-load("@build_bazel_rules_nodejs//:index.bzl", "node_repositories")
+load("@rules_nodejs//:index.bzl", "node_repositories")
 node_repositories()
 
-load("@build_bazel_rules_nodejs//:index.bzl", "npm_install")
+load("@rules_nodejs//:index.bzl", "npm_install")
 npm_install(
     name = "npm",
     package_json = "//public:package.json",
     package_lock_json = "//public:package-lock.json",
 )
 
-load("@io_bazel_rules_sass//:defs.bzl", "sass_repositories")
+load("@gzgz_rules_sass//:defs.bzl", "sass_repositories")
 sass_repositories()
