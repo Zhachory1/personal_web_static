@@ -1,5 +1,5 @@
 # Base Image
-FROM bazelbuild/bazel:latest AS builder
+FROM chainguard/bazel:latest AS builder
 
 # Working Directory
 WORKDIR /app
