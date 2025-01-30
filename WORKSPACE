@@ -1,3 +1,9 @@
+# This file marks the root of the Bazel workspace.
+# See MODULE.bazel for external dependencies setup.
+
+## WORKSPACE
+workspace(name = "com_zhach_personal_web")
+
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive") 
 
 ##################
