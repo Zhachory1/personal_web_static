@@ -7,6 +7,7 @@ TO_DIR="public"
 
 FILES=[
   "index.html",
+  "favicon.ico",
   "sitemap.xml",
   "css/*.css",
   "js/*.min.js",  # javascript files are REQUIRED to be minified
