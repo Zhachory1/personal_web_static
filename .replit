@@ -2,3 +2,22 @@ modules = ["web", "nodejs-20", "python-base-3.13", "cpp-clang14"]
 
 [nix]
 channel = "stable-24_05"
+
+[workflows]
+
+[[workflows.workflow]]
+name = "Preview"
+mode = "sequential"
+author = 41187225
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "python bundle.py"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "cd public;    python3 -m http.server"
+
+[[ports]]
+localPort = 8000
+externalPort = 80
