@@ -13,6 +13,7 @@ FILES=[
   "js/*.min.js",  # javascript files are REQUIRED to be minified
   "libs/**/*",
   "images/*",  # We expect a flat directory of images
+  "ZhachResume_20250612.pdf",  # The main star! I need me resume here
 ]
 
 if __name__ == "__main__":
