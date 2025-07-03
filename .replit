@@ -6,7 +6,7 @@ channel = "stable-24_05"
 [workflows]
 
 [[workflows.workflow]]
-name = "Preview"
+name = "Run"
 mode = "sequential"
 author = 41187225
 
