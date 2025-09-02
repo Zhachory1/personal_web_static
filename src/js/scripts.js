@@ -105,24 +105,23 @@ for (let i = 0; i < filterBtn.length; i++) {
 const navigationLinks = document.querySelectorAll("[data-nav-link]");
 const pages = document.querySelectorAll("[data-page]");
 
+// Making sure we trim white spaces and THEN lowercase
+const cleanNavString = function (navString) {
+    return navString.trim().toLowerCase();
+};
+
 // add event to all nav link
 for (let i = 0; i < navigationLinks.length; i++) {
     navigationLinks[i].addEventListener("click", function () {
         for (let j = 0; j < pages.length; j++) {
-            if (this.innerHTML.toLowerCase() === pages[j].dataset.page) {
+            if (cleanNavString(this.innerHTML) === pages[j].dataset.page) {
                 pages[j].classList.add("active");
-                this.classList.add("active");
+                navigationLinks[j].classList.add("active");
                 window.scrollTo(0, 0);
             } else {
                 pages[j].classList.remove("active");
+                navigationLinks[j].classList.remove("active");
             }
         }
-        
-        // Remove active class from all navigation links first
-        for (let k = 0; k < navigationLinks.length; k++) {
-            navigationLinks[k].classList.remove("active");
-        }
-        // Add active class to the clicked link
-        this.classList.add("active");
     });
 }
