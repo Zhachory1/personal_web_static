@@ -22,3 +22,6 @@ args = "cd public;    python3 -m http.server"
 [[ports]]
 localPort = 8000
 externalPort = 80
+
+[agent]
+expertMode = true

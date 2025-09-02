@@ -6,7 +6,7 @@ FROM_DIR="src"
 TO_DIR="public"
 
 FILES=[
-  "index.html",
+  "*.html",
   "favicon.ico",
   "sitemap.xml",
   "css/*.css",
