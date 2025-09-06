@@ -3,12 +3,12 @@ import glob
 import shutil
 from string import Template
 from src.py import rjsmin
-# from dotenv import load_dotenv
-# import os
-# from bs4 import BeautifulSoup
+from dotenv import load_dotenv
+import os
+from bs4 import BeautifulSoup
+import subprocess
 
-
-# load_dotenv() # Load environment variables from .env
+load_dotenv() # Load environment variables from .env
 
 GTAG_ID = os.getenv("GTAGID")
 
@@ -38,32 +38,51 @@ GTAG_STR = Template("""
 </script>
 """)
 
+def minify_js_with_mangling(js_code):
+    try:
+        # Execute UglifyJS with mangling options
+        # --mangle: enables mangling
+        # --compress: enables various code optimizations
+        # --toplevel: mangle top-level names
+        result = subprocess.run(
+            ['uglifyjs', '--mangle', '--compress', '--toplevel'],
+            input=js_code.encode('utf-8'),  # Encode input to bytes
+            capture_output=True,
+            check=True
+        )
+        return result.stdout.decode('utf-8')  # Decode output to string
+    except subprocess.CalledProcessError as e:
+        print(f"Error during minification: {e}")
+        print(f"Stderr: {e.stderr.decode('utf-8')}")
+        return None
+
 # Mainly just adding a header tag to all html files to track gtag stuff
 def BundleHtmlFile(input_file: str, dest_path: str) -> bool:
-  return False
   if input_file[-5:] != ".html":
     return False
 
   # Don't do anything if we don't have the gtag
-  if GTAG_ID.empty():
+  if not GTAG_ID:
     return False
 
-  # # Load the HTML file
-  # with open(input_file, "r") as f:
-  #     soup = BeautifulSoup(f, 'html.parser')
+  # Load the HTML file
+  print("Adding gtag to HTML")
+  with open(input_file, "r") as f:
+      soup = BeautifulSoup(f, 'html.parser')
 
-  # head_tag = soup.head
+  head_tag = soup.head
 
-  # # Update element content or attributes
-  # filled_template = GTAG_STR.substitute(gtagid=GTAG_ID)
-  # head_tag.append(filled_template)
-  # soup.smooth()
+  # Update element content or attributes
+  filled_template = GTAG_STR.substitute(gtagid=GTAG_ID)
+  head_tag.append(filled_template)
+  soup.smooth()
+  print(f"Added gtag to {input_file}")
 
-  # # Save the modified HTML
-  # with open(dest_path, "w") as f:
-  #     f.write(str(soup))
+  # Save the modified HTML
+  with open(dest_path, "w") as f:
+      f.write(str(soup))
 
-  # return True
+  return True
   
 
 # Minimizes and writes javascript files. Returns false if not a 
@@ -75,7 +94,10 @@ def BundleJsFile(input_file: str, dest_path: str) -> bool:
   dest_path = dest_path[:-2] + "min.js"
   with open(input_file, 'r') as file:
     file_content = file.read()
-  min_js_content = rjsmin.jsmin(file_content)
+  min_js_content = minify_js_with_mangling(file_content)
+  if not min_js_content:
+    print(f"Failed to minify {input_file}")
+    return False
   with open(dest_path, 'w') as new_file:
     new_file.write(min_js_content)
   print(f"Wrote min file {dest_path}")
