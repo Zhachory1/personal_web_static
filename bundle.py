@@ -1,6 +1,16 @@
 import os
 import glob
 import shutil
+from string import Template
+from src.py import rjsmin
+# from dotenv import load_dotenv
+# import os
+# from bs4 import BeautifulSoup
+
+
+# load_dotenv() # Load environment variables from .env
+
+GTAG_ID = os.getenv("GTAGID")
 
 FROM_DIR="src"
 TO_DIR="public"
@@ -10,11 +20,67 @@ FILES=[
   "favicon.ico",
   "sitemap.xml",
   "css/*.css",
-  "js/*.min.js",  # javascript files are REQUIRED to be minified
+  "js/*.js",  # we will be minimizing javascript files ourselves
   "libs/**/*",
   "images/*",  # We expect a flat directory of images
   "ZhachResume_20250612.pdf",  # The main star! I need me resume here
 ]
+
+GTAG_STR = Template("""
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=$gtagid"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', '$gtagid');
+</script>
+""")
+
+# Mainly just adding a header tag to all html files to track gtag stuff
+def BundleHtmlFile(input_file: str, dest_path: str) -> bool:
+  return False
+  if input_file[-5:] != ".html":
+    return False
+
+  # Don't do anything if we don't have the gtag
+  if GTAG_ID.empty():
+    return False
+
+  # # Load the HTML file
+  # with open(input_file, "r") as f:
+  #     soup = BeautifulSoup(f, 'html.parser')
+
+  # head_tag = soup.head
+
+  # # Update element content or attributes
+  # filled_template = GTAG_STR.substitute(gtagid=GTAG_ID)
+  # head_tag.append(filled_template)
+  # soup.smooth()
+
+  # # Save the modified HTML
+  # with open(dest_path, "w") as f:
+  #     f.write(str(soup))
+
+  # return True
+  
+
+# Minimizes and writes javascript files. Returns false if not a 
+# js file or any other error.
+def BundleJsFile(input_file: str, dest_path: str) -> bool:
+  if input_file[-3:] != ".js":
+    return False
+  print("Minimizing JS")
+  dest_path = dest_path[:-2] + "min.js"
+  with open(input_file, 'r') as file:
+    file_content = file.read()
+  min_js_content = rjsmin.jsmin(file_content)
+  with open(dest_path, 'w') as new_file:
+    new_file.write(min_js_content)
+  print(f"Wrote min file {dest_path}")
+  print(f"Saved {int((len(file_content)-len(min_js_content))/len(file_content) * 100)}% of space")
+  return True
 
 if __name__ == "__main__":
   # clear the destination folder
@@ -28,15 +94,27 @@ if __name__ == "__main__":
     
     for file in files:
       dest_path = os.path.join(TO_DIR, os.path.relpath(file, FROM_DIR))
-
+      
       if os.path.isfile(file):
-        # Ensure the destination directory exists
         os.makedirs(os.path.dirname(dest_path), exist_ok=True)
+
+        done_file = False
+        # Special bundling functions. Functions should take in file str, output
+        # file str, and return a bool saying if it completed successfullt
+        for func in [BundleJsFile, BundleHtmlFile]:
+          if func(file, dest_path):
+            done_file = True
+            break
+
+        if done_file:
+          continue
+          
+        # Ensure the destination directory exists
         shutil.copy2(file, dest_path)  # copy with metadata
         print(f"Copied file: {file} to {dest_path}")
       elif os.path.isdir(file):
         # Ensure the destination directory exists
-        os.makedirs(dest_path, exist_ok=True)
+        # os.makedirs(dest_path, exist_ok=True)
         # Use copytree to copy the directory structure and files
         shutil.copytree(file, dest_path, dirs_exist_ok=True)
         print(f"Copied directory: {file} to {dest_path}")
