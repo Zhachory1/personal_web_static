@@ -26,16 +26,13 @@ FILES=[
   "ZhachResume_20250612.pdf",  # The main star! I need me resume here
 ]
 
-GTAG_STR = Template("""
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=$gtagid"></script>
-<script>
+GTAG_URL = Template("https://www.googletagmanager.com/gtag/js?id=$gtagid")
+GTAG_CODE = Template("""
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
   gtag('config', '$gtagid');
-</script>
 """)
 
 def minify_js_with_mangling(js_code):
@@ -63,6 +60,7 @@ def BundleHtmlFile(input_file: str, dest_path: str) -> bool:
 
   # Don't do anything if we don't have the gtag
   if not GTAG_ID:
+    print("No GTAG_ID found, skipping gtag addition")
     return False
 
   # Load the HTML file
@@ -73,14 +71,20 @@ def BundleHtmlFile(input_file: str, dest_path: str) -> bool:
   head_tag = soup.head
 
   # Update element content or attributes
-  filled_template = GTAG_STR.substitute(gtagid=GTAG_ID)
-  head_tag.append(filled_template)
+  filled_url = GTAG_URL.substitute(gtagid=GTAG_ID)
+  filled_code = GTAG_CODE.substitute(gtagid=GTAG_ID)
+  script_tag = soup.new_tag("script", src=filled_url)
+  script_tag["async"] = True
+  head_tag.append(script_tag)
+  filled_code_tag = soup.new_tag("script")
+  filled_code_tag.string = filled_code
+  head_tag.append(filled_code_tag)
   soup.smooth()
   print(f"Added gtag to {input_file}")
 
   # Save the modified HTML
   with open(dest_path, "w") as f:
-      f.write(str(soup))
+      f.write(soup.prettify())
 
   return True
   

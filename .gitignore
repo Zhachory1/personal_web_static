@@ -37,7 +37,6 @@ __pycache__/
 .Python
 build/
 develop-eggs/
-dist/
 downloads/
 eggs/
 .eggs/
@@ -51,7 +50,8 @@ pip-wheel-metadata/
 share/python-wheels/
 *.egg-info
 .installed.cfg
-# Binary files
+
+# Binary files (one I specifically don't want checked in)
 *.bin
 *.exe
 *.dll
@@ -72,3 +72,6 @@ pyvenv.cfg
 .venv
 env/
 venv/
+
+# Public static files (these will be rebuilt as needed)
+public/
