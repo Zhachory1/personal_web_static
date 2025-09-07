@@ -110,7 +110,8 @@ def BundleJsFile(input_file: str, dest_path: str) -> bool:
 
 if __name__ == "__main__":
   # clear the destination folder
-  shutil.rmtree(TO_DIR)
+  if os.path.exists(TO_DIR):
+    shutil.rmtree(TO_DIR)
   os.makedirs(TO_DIR, exist_ok=True)
   for pattern in FILES:
     source_path = os.path.join(FROM_DIR, pattern)
