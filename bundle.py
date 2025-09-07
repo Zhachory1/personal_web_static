@@ -140,7 +140,7 @@ if __name__ == "__main__":
         print(f"Copied file: {file} to {dest_path}")
       elif os.path.isdir(file):
         # Ensure the destination directory exists
-        # os.makedirs(dest_path, exist_ok=True)
+        os.makedirs(dest_path, exist_ok=True)
         # Use copytree to copy the directory structure and files
         shutil.copytree(file, dest_path, dirs_exist_ok=True)
         print(f"Copied directory: {file} to {dest_path}")
