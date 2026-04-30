@@ -2,1016 +2,312 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Zhachory Volker - Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zhachory Volker — Staff Software Engineer</title>
+  <meta name="description" content="Staff Software Engineer specializing in AI/ML and Search. Previously YouTube Search (Google), now Rokt." />
 
-    <!--- favicon-->
-    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="./css/styles.css" />
 
-    <!--- custom css link-->
-    <link rel="stylesheet" href="./css/styles.css" />
-
-    <!--- google font link-->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
-        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,700;9..144,900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
 </head>
 
 <body>
-    <!--- #MAIN-->
 
-    <main>
-        <!--- #SIDEBAR-->
-
-        <aside class="sidebar" data-sidebar>
-            <div class="sidebar-info">
-                <figure class="avatar-box">
-                    <img src="./images/profile_half.png" alt="Zhachory Volker" id="profile-img" width="80" />
-                </figure>
-
-                <div class="info-content">
-                    <h1 class="name" title="Zhachory Volker">
-                        Zhachory Volker
-                    </h1>
-
-                    <p class="title">AI/ML Senior Software Engineer</p>
-                </div>
-
-                <button class="info_more-btn" data-sidebar-btn>
-                    <span>Show Contacts</span>
-
-                    <ion-icon name="chevron-down"></ion-icon>
-                </button>
-            </div>
-
-            <div class="sidebar-info_more">
-                <div class="separator"></div>
-
-                <ul class="contacts-list">
-                    <li class="contact-item">
-                        <div class="icon-box">
-                            <ion-icon name="mail-outline"></ion-icon>
-                        </div>
-
-                        <div class="contact-info">
-                            <p class="contact-title">Email</p>
-
-                            <a href="mailto:me@zhachory.com" class="contact-link">me@zhachory.com</a>
-                        </div>
-                    </li>
-
-                    <li class="contact-item">
-                        <div class="icon-box">
-                            <ion-icon name="phone-portrait-outline"></ion-icon>
-                        </div>
-
-                        <div class="contact-info">
-                            <p class="contact-title">Phone</p>
-
-                            <a href="tel:+19403154580" class="contact-link">+1 (940) 315-4580</a>
-                        </div>
-                    </li>
-
-                    <li class="contact-item">
-                        <div class="icon-box">
-                            <ion-icon name="location-outline"></ion-icon>
-                        </div>
-
-                        <div class="contact-info">
-                            <p class="contact-title">Location</p>
-
-                            <address>New York City, New York, USA</address>
-                        </div>
-                    </li>
-                </ul>
-
-                <div class="separator"></div>
-
-                <ul class="social-list">
-                    <li class="social-item">
-                        <a href="https://buymeacoffee.com/zhach" class="social-link">
-                            <i class="fa-solid fa-mug-saucer"></i>
-                        </a>
-                    </li>
-
-                    <li class="social-item">
-                        <a href="https://x.com/zachwith2hs" class="social-link">
-                            <i class="fa-brands fa-x-twitter"></i>
-                        </a>
-                    </li>
-
-                    <li class="social-item">
-                        <a href="https://www.instagram.com/zhachory/" class="social-link">
-                            <i class="fa-brands fa-instagram"></i>
-                        </a>
-                    </li>
-
-                    <li class="social-item">
-                        <a href="https://github.com/Zhachory1" class="social-link">
-                            <i class="fa-brands fa-github"></i>
-                        </a>
-                    </li>
-
-                    <li class="social-item">
-                        <a href="https://www.linkedin.com/in/zhachory1/" class="social-link">
-                            <i class="fa-brands fa-linkedin-in"></i>
-                        </a>
-                    </li>
-
-                    <li class="social-item">
-                        <a href="https://mastodon.social/@zhach" class="social-link">
-                            <i class="fa-brands fa-mastodon"></i>
-                        </a>
-                    </li>
-
-                    <li class="social-item">
-                        <a href="https://bsky.app/profile/zhach.bsky.social" class="social-link">
-                            <i class="fa-brands fa-bluesky"></i>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </aside>
-
-        <div class="main-content">
-            <!--- #NAVBAR-->
-
-            <nav class="navbar">
-                <ul class="navbar-list">
-                    <li class="navbar-item">
-                        <button class="navbar-link active" data-nav-link>
-                            About
-                        </button>
-                    </li>
-
-                    <li class="navbar-item">
-                        <button class="navbar-link" data-nav-link>
-                            Resume
-                        </button>
-                    </li>
-
-                    <li class="navbar-item">
-                        <button class="navbar-link" data-nav-link>
-                            Portfolio
-                        </button>
-                    </li>
-
-                    <li class="navbar-item">
-                        <button class="navbar-link" onclick="location.href='https://zhach.news'">
-                            Blog
-                        </button>
-                    </li>
-
-                    <li class="navbar-item">
-                        <button class="navbar-link" data-nav-link>
-                            Contact
-                        </button>
-                    </li>
-                </ul>
-            </nav>
-
-            <!--- #ABOUT-->
-
-            <article class="about active" data-page="about">
-                <header>
-                    <h2 class="h2 article-title">About me</h2>
-                </header>
-
-                <section class="about-text">
-                    <p>
-                        Highly accomplished Senior Software Engineer with
-                        over 13 years of full-stack development experience,
-                        specializing in Machine Learning (10+ years) and
-                        data mining (8+ years). Seeking a challenging Staff
-                        Software Engineer position focused on AI/ML within
-                        Search or Responsible domains.
-                    </p>
-
-                    <p>
-                        Proven expertise in designing and implementing
-                        scalable Machine Learning systems, Search and
-                        Recommendation stacks, and robust infrastructure.
-                        Adept at leveraging diverse technologies to drive
-                        significant user engagement, efficiency
-                        improvements, and product innovation. Committed to
-                        continuous learning and applying cutting-edge
-                        techniques to deliver impactful, responsible
-                        solutions.
-                    </p>
-                </section>
-
-                <section class="service">
-                    <h3 class="h3 service-title">What I'm doing</h3>
-
-                    <ul class="service-list">
-                        <li class="service-item">
-                            <div class="service-icon-box">
-                                <img src="./images/programming.png" alt="swe icon" width="60" />
-                            </div>
-
-                            <div class="service-content-box">
-                                <h4 class="h4 service-item-title">
-                                    Software Engineering
-                                </h4>
-
-                                <p class="service-item-text">
-                                    Turn ideas into reliable, high-quality
-                                    software solutions by applying best
-                                    practices in development, testing, and
-                                    deployment.
-                                </p>
-                                <a href="https://www.flaticon.com/free-icons/coding" class="icon-attr"
-                                    title="coding icons">Coding icons created by juicy_fish -
-                                    Flaticon</a>
-                            </div>
-                        </li>
-
-                        <li class="service-item">
-                            <div class="service-icon-box">
-                                <img src="./images/ai.png" alt="AI icon" width="60" />
-                            </div>
-
-                            <div class="service-content-box">
-                                <h4 class="h4 service-item-title">
-                                    AI Engineering
-                                </h4>
-
-                                <p class="service-item-text">
-                                    Leverage cutting-edge AI and ML to
-                                    develop intelligent solutions that
-                                    automate processes, generate insights,
-                                    and enhance user experiences.
-                                </p>
-                                <a href="https://www.flaticon.com/free-icons/artificial-intelligence"
-                                    title="artificial intelligence icons" class="icon-attr">Artificial intelligence
-                                    icons created
-                                    by Freepik - Flaticon</a>
-                            </div>
-                        </li>
-
-                        <li class="service-item">
-                            <div class="service-icon-box">
-                                <img src="./images/cloud.png" alt="cloud icon" width="60" />
-                            </div>
-
-                            <div class="service-content-box">
-                                <h4 class="h4 service-item-title">
-                                    Software Architecture
-                                </h4>
-
-                                <p class="service-item-text">
-                                    Design and build a system of software
-                                    elements to foundate an application,
-                                    ensuring it's scalable, secure, and
-                                    reliable.
-                                </p>
-                                <a href="https://www.flaticon.com/free-icons/cloud" class="icon-attr"
-                                    title="cloud icons">Cloud icons created by Freepik -
-                                    Flaticon</a>
-                            </div>
-                        </li>
-
-                        <li class="service-item">
-                            <div class="service-icon-box">
-                                <img src="./images/search.png" alt="search icon" width="60" />
-                            </div>
-
-                            <div class="service-content-box">
-                                <h4 class="h4 service-item-title">
-                                    Search and Recommendation
-                                </h4>
-
-                                <p class="service-item-text">
-                                    Design and implement powerful RecSys
-                                    engines that help users find what
-                                    they're looking for, boosting
-                                    engagement, driving conversions and
-                                    other business objectives.
-                                </p>
-                                <a href="https://www.flaticon.com/free-icons/magnifying-glass" class="icon-attr"
-                                    title="magnifying-glass icons">Magnifying-glass icons created by
-                                    Freepik - Flaticon</a>
-                            </div>
-                        </li>
-
-                        <li class="service-item">
-                            <div class="service-icon-box">
-                                <img src="./images/report.png" alt="reporter icon" width="60" />
-                            </div>
-
-                            <div class="service-content-box">
-                                <h4 class="h4 service-item-title">
-                                    Computational Journalism
-                                </h4>
-
-                                <p class="service-item-text">
-                                    Utilize state-of-the-art AI methods and
-                                    models to support journalists,
-                                    reporters, and the news ecosystem.
-                                    Pragmatically take these methods to help
-                                    make the news better.
-                                </p>
-                                <a href="https://www.flaticon.com/free-icons/journalist" class="icon-attr"
-                                    title="journalist icons">Journalist icons created by Eucalyp -
-                                    Flaticon</a>
-                            </div>
-                        </li>
-
-                        <li class="service-item">
-                            <div class="service-icon-box">
-                                <img src="./images/data-collection.png" alt="data collecton icon" width="60" />
-                            </div>
-
-                            <div class="service-content-box">
-                                <h4 class="h4 service-item-title">
-                                    Data Processing
-                                </h4>
-
-                                <p class="service-item-text">
-                                    Design and create robust data pipelines
-                                    that handle large datasets, ensuring
-                                    your data is clean, accessible, and
-                                    ready for analysis.
-                                </p>
-                                <a href="https://www.flaticon.com/free-icons/data-collection" class="icon-attr"
-                                    title="data collection icons">Data collection icons created by Becris
-                                    - Flaticon</a>
-                            </div>
-                        </li>
-                    </ul>
-                </section>
-
-                <!--
-          - testimonials
-        -->
-
-                <!-- <section class="testimonials">
-            <h3 class="h3 testimonials-title">Testimonials</h3>
-
-            <ul class="testimonials-list has-scrollbar">
-              <li class="testimonials-item">
-                <div class="content-card" data-testimonials-item>
-                  <figure class="testimonials-avatar-box">
-                    <img
-                      src="./assets/images/avatar-1.png"
-                      alt="Daniel lewis"
-                      width="60"
-                      data-testimonials-avatar
-                    />
-                  </figure>
-
-                  <h4
-                    class="h4 testimonials-item-title"
-                    data-testimonials-title
-                  >
-                    Daniel lewis
-                  </h4>
-
-                  <div class="testimonials-text" data-testimonials-text>
-                    <p>
-                      Richard was hired to create a corporate identity. We were
-                      very pleased with the work done. She has a lot of
-                      experience and is very concerned about the needs of
-                      client. Lorem ipsum dolor sit amet, ullamcous cididt
-                      consectetur adipiscing elit, seds do et eiusmod tempor
-                      incididunt ut laborels dolore magnarels alia.
-                    </p>
-                  </div>
-                </div>
-              </li>
-
-              <li class="testimonials-item">
-                <div class="content-card" data-testimonials-item>
-                  <figure class="testimonials-avatar-box">
-                    <img
-                      src="./assets/images/avatar-2.png"
-                      alt="Jessica miller"
-                      width="60"
-                      data-testimonials-avatar
-                    />
-                  </figure>
-
-                  <h4
-                    class="h4 testimonials-item-title"
-                    data-testimonials-title
-                  >
-                    Jessica miller
-                  </h4>
-
-                  <div class="testimonials-text" data-testimonials-text>
-                    <p>
-                      Richard was hired to create a corporate identity. We were
-                      very pleased with the work done. She has a lot of
-                      experience and is very concerned about the needs of
-                      client. Lorem ipsum dolor sit amet, ullamcous cididt
-                      consectetur adipiscing elit, seds do et eiusmod tempor
-                      incididunt ut laborels dolore magnarels alia.
-                    </p>
-                  </div>
-                </div>
-              </li>
-
-              <li class="testimonials-item">
-                <div class="content-card" data-testimonials-item>
-                  <figure class="testimonials-avatar-box">
-                    <img
-                      src="./assets/images/avatar-3.png"
-                      alt="Emily evans"
-                      width="60"
-                      data-testimonials-avatar
-                    />
-                  </figure>
-
-                  <h4
-                    class="h4 testimonials-item-title"
-                    data-testimonials-title
-                  >
-                    Emily evans
-                  </h4>
-
-                  <div class="testimonials-text" data-testimonials-text>
-                    <p>
-                      Richard was hired to create a corporate identity. We were
-                      very pleased with the work done. She has a lot of
-                      experience and is very concerned about the needs of
-                      client. Lorem ipsum dolor sit amet, ullamcous cididt
-                      consectetur adipiscing elit, seds do et eiusmod tempor
-                      incididunt ut laborels dolore magnarels alia.
-                    </p>
-                  </div>
-                </div>
-              </li>
-
-              <li class="testimonials-item">
-                <div class="content-card" data-testimonials-item>
-                  <figure class="testimonials-avatar-box">
-                    <img
-                      src="./assets/images/avatar-4.png"
-                      alt="Henry william"
-                      width="60"
-                      data-testimonials-avatar
-                    />
-                  </figure>
-
-                  <h4
-                    class="h4 testimonials-item-title"
-                    data-testimonials-title
-                  >
-                    Henry william
-                  </h4>
-
-                  <div class="testimonials-text" data-testimonials-text>
-                    <p>
-                      Richard was hired to create a corporate identity. We were
-                      very pleased with the work done. She has a lot of
-                      experience and is very concerned about the needs of
-                      client. Lorem ipsum dolor sit amet, ullamcous cididt
-                      consectetur adipiscing elit, seds do et eiusmod tempor
-                      incididunt ut laborels dolore magnarels alia.
-                    </p>
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </section> -->
-
-                <!--
-          - testimonials modal
-        -->
-
-                <div class="modal-container" data-modal-container>
-                    <div class="overlay" data-overlay></div>
-
-                    <section class="testimonials-modal">
-                        <button class="modal-close-btn" data-modal-close-btn>
-                            <ion-icon name="close-outline"></ion-icon>
-                        </button>
-
-                        <div class="modal-img-wrapper">
-                            <figure class="modal-avatar-box">
-                                <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="80" data-modal-img />
-                            </figure>
-
-                            <img src="./assets/images/icon-quote.svg" alt="quote icon" />
-                        </div>
-
-                        <div class="modal-content">
-                            <h4 class="h3 modal-title" data-modal-title>
-                                Daniel lewis
-                            </h4>
-
-                            <time datetime="2021-06-14">14 June, 2021</time>
-
-                            <div data-modal-text>
-                                <p>
-                                    Richard was hired to create a corporate
-                                    identity. We were very pleased with the
-                                    work done. She has a lot of experience
-                                    and is very concerned about the needs of
-                                    client. Lorem ipsum dolor sit amet,
-                                    ullamcous cididt consectetur adipiscing
-                                    elit, seds do et eiusmod tempor
-                                    incididunt ut laborels dolore magnarels
-                                    alia.
-                                </p>
-                            </div>
-                        </div>
-                    </section>
-                </div>
-            </article>
-
-            <!--- #RESUME-->
-
-            <article class="resume" data-page="resume">
-                <header>
-                    <h2 class="h2 article-title">Resume</h2>
-                    <button class="form-btn" onclick="location.href='ZhachResume_20260416.pdf'">
-                        PDF Link
-                    </button>
-                </header>
-
-                <section class="timeline">
-                    <div class="title-wrapper">
-                        <div class="icon-box">
-                            <ion-icon name="book-outline"></ion-icon>
-                        </div>
-
-                        <h3 class="h3">Experience</h3>
-                    </div>
-
-                    <ol class="timeline-list">
-                        <li class="timeline-item">
-                            <h4 class="h4 timeline-item-title">
-                                Staff Software Engineer - <i>Rokt</i>
-                            </h4>
-
-                            <span>October 2025 — Present</span>
-
-                            <p class="timeline-text">
-                                Leading and mentoring a team of 15 engineers
-                                on the Audience and Bidding team, providing
-                                technical leadership and strategic direction
-                                currently delivering a 40% uplift in CVR for
-                                ML-generated audiences. Architected and
-                                deployed a dynamic ranking layer for
-                                on-the-fly audience generation, scaling
-                                revenue from generated audiences by 120%.
-                                Reduced ML audience generation pipeline costs
-                                by 75% (saving ~$750k annually) by migrating
-                                to a two-tower infrastructure with a robust
-                                data refresh system. Spearheaded an org-wide
-                                AI integration initiative upskilling engineers
-                                on Claude, Cursor, OpenCode, and Codex,
-                                improving Developer Satisfaction by 25%.
-                            </p>
-                        </li>
-
-                        <li class="timeline-item">
-                            <h4 class="h4 timeline-item-title">
-                                Senior Software Engineer - <i>YouTube Search</i>
-                            </h4>
-
-                            <span>March 2018 — September 2025</span>
-
-                            <p class="timeline-text">
-                                Significantly contributed to enhancing the
-                                platform through innovative Machine Learning
-                                and infrastructure development. Designed a
-                                unified ranking framework that boosted Search
-                                Active Users (SAUs) by 2% and increased CTR
-                                by 25% for multiple features in a single
-                                launch. Spearheaded the YouTube Search News
-                                experience with a team of 4 SWEs, increasing
-                                News CTR by 38% and daily News Searches by
-                                10% (~8M queries) through clustering
-                                algorithms and NLP models. Led a resource
-                                optimization project achieving a 60%
-                                reduction in compute usage (estimated savings:
-                                $1.8M annually).
-                            </p>
-                        </li>
-
-                        <li class="timeline-item">
-                            <h4 class="h4 timeline-item-title">
-                                Software Engineering Resident - <i>Google Research</i>
-                            </h4>
-
-                            <span>March 2017 — March 2018</span>
-
-                            <p class="timeline-text">
-                                Applied NLP and Machine Learning (RNNs, CNNs,
-                                Decision Trees) to over 10,000 articles,
-                                associating user questions with relevant
-                                documents in the fact-checking corpus, still
-                                visible on the first page of Google today.
-                                Created and maintained MapReduce pipelines in
-                                C++ for managing the fact-checking article
-                                corpus, utilized by six major news publishers.
-                                Developed data pipelines implementing label
-                                propagation and semi-supervised learning on
-                                large-scale graphs, increasing library
-                                adoption by 8%.
-                            </p>
-                        </li>
-
-                        <li class="timeline-item">
-                            <h4 class="h4 timeline-item-title">
-                                System Data & Performance Intern -
-                                <i>Ericsson</i>
-                            </h4>
-
-                            <span>May 2015 — March 2017</span>
-
-                            <p class="timeline-text">
-                                Developed and maintained full-stack
-                                applications and systems to simplify
-                                Ericsson’s processes and routines in
-                                Polymer/other web frameworks and
-                                Python/Java. Managed databases with
-                                PostgreSQL, MySQL, Cassandra, MongoDB, and
-                                HBase for multiple applications across
-                                multiple servers. Mined data from these
-                                databases to predict site mis-handlements
-                                and suggest possible solutions, contributing
-                                to a 12% reduction in site risks. Managed
-                                computer systems with Hadoop, Linux, and
-                                Windows. Created internal marketing
-                                campaigns with videos, newsletters, and
-                                programs to increased R&D projects awareness
-                                by 25%
-                            </p>
-                        </li>
-                    </ol>
-                </section>
-
-                <section class="timeline">
-                    <div class="title-wrapper">
-                        <div class="icon-box">
-                            <ion-icon name="book-outline"></ion-icon>
-                        </div>
-
-                        <h3 class="h3">Education</h3>
-                    </div>
-
-                    <ol class="timeline-list">
-                        <li class="timeline-item">
-                            <h4 class="h4 timeline-item-title">
-                                University of North Texas
-                            </h4>
-
-                            <span>Aug 2013 — 2018</span>
-
-                            <p class="timeline-text">
-                                <b>Relevant Coursework:</b> Advanced
-                                Algorithms, Data Structures, Software
-                                Engineering, Discrete Math, Game Mechanics,
-                                Operating Systems, Artificial Intelligence
-                                <br />
-                                <b>Dean's list:</b> Fall 2013, Spring 2015,
-                                Fall 2015, Spring 2016
-                                <br />
-                                <b>GPA:</b> 3.44
-                            </p>
-                        </li>
-                    </ol>
-                </section>
-
-                <section class="skill">
-                    <h3 class="h3 skills-title">My skills</h3>
-
-                    <ul class="skills-list content-card">
-                        <li class="skills-item">
-                            <div class="title-wrapper">
-                                <h5 class="h5">AI/ML</h5>
-                                <data value="90">90%</data>
-                            </div>
-
-                            <div class="skill-progress-bg">
-                                <div class="skill-progress-fill" style="width: 90%"></div>
-                            </div>
-                        </li>
-
-                        <li class="skills-item">
-                            <div class="title-wrapper">
-                                <h5 class="h5">Software Architecture</h5>
-                                <data value="80">80%</data>
-                            </div>
-
-                            <div class="skill-progress-bg">
-                                <div class="skill-progress-fill" style="width: 80%"></div>
-                            </div>
-                        </li>
-
-                        <li class="skills-item">
-                            <div class="title-wrapper">
-                                <h5 class="h5">Leadership</h5>
-                                <data value="80">80%</data>
-                            </div>
-
-                            <div class="skill-progress-bg">
-                                <div class="skill-progress-fill" style="width: 80%"></div>
-                            </div>
-                        </li>
-
-                        <li class="skills-item">
-                            <div class="title-wrapper">
-                                <h5 class="h5">C++</h5>
-                                <data value="90">90%</data>
-                            </div>
-
-                            <div class="skill-progress-bg">
-                                <div class="skill-progress-fill" style="width: 90%"></div>
-                            </div>
-                        </li>
-
-                        <li class="skills-item">
-                            <div class="title-wrapper">
-                                <h5 class="h5">Go</h5>
-                                <data value="70">70%</data>
-                            </div>
-
-                            <div class="skill-progress-bg">
-                                <div class="skill-progress-fill" style="width: 70%"></div>
-                            </div>
-                        </li>
-
-                        <li class="skills-item">
-                            <div class="title-wrapper">
-                                <h5 class="h5">Project Management</h5>
-                                <data value="70">70%</data>
-                            </div>
-
-                            <div class="skill-progress-bg">
-                                <div class="skill-progress-fill" style="width: 70%"></div>
-                            </div>
-                        </li>
-
-                        <li class="skills-item">
-                            <div class="title-wrapper">
-                                <h5 class="h5">Full Stack Development</h5>
-                                <data value="60">60%</data>
-                            </div>
-
-                            <div class="skill-progress-bg">
-                                <div class="skill-progress-fill" style="width: 60%"></div>
-                            </div>
-                        </li>
-
-                        <li class="skills-item">
-                            <div class="title-wrapper">
-                                <h5 class="h5">ETL</h5>
-                                <data value="50">50%</data>
-                            </div>
-
-                            <div class="skill-progress-bg">
-                                <div class="skill-progress-fill" style="width: 50%"></div>
-                            </div>
-                        </li>
-
-                        <li class="skills-item">
-                            <div class="title-wrapper">
-                                <h5 class="h5">Java</h5>
-                                <data value="40">40%</data>
-                            </div>
-
-                            <div class="skill-progress-bg">
-                                <div class="skill-progress-fill" style="width: 40%"></div>
-                            </div>
-                        </li>
-                    </ul>
-                </section>
-            </article>
-
-            <!--- #PORTFOLIO-->
-
-            <article class="portfolio" data-page="portfolio">
-                <header>
-                    <h2 class="h2 article-title">Portfolio</h2>
-                </header>
-
-                <section class="projects">
-                    <ul class="filter-list">
-                        <li class="filter-item">
-                            <button class="active" data-filter-btn>
-                                All
-                            </button>
-                        </li>
-
-                        <li class="filter-item">
-                            <button data-filter-btn>News</button>
-                        </li>
-
-                        <li class="filter-item">
-                            <button data-filter-btn>AI/ML</button>
-                        </li>
-
-                        <li class="filter-item">
-                            <button data-filter-btn>Fun</button>
-                        </li>
-                        <li class="filter-item">
-                            <button data-filter-btn>Sims</button>
-                        </li>
-                    </ul>
-
-                    <div class="filter-select-box">
-                        <button class="filter-select" data-select>
-                            <div class="select-value" data-selecct-value>
-                                Select category
-                            </div>
-
-                            <div class="select-icon">
-                                <ion-icon name="chevron-down"></ion-icon>
-                            </div>
-                        </button>
-
-                        <ul class="select-list">
-                            <li class="select-item">
-                                <button data-select-item>All</button>
-                            </li>
-
-                            <li class="select-item">
-                                <button data-select-item>News</button>
-                            </li>
-
-                            <li class="select-item">
-                                <button data-select-item>AI/ML</button>
-                            </li>
-
-                            <li class="select-item">
-                                <button data-select-item>Fun</button>
-                            </li>
-                            <li class="select-item">
-                                <button data-select-item>Sims</button>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <ul class="project-list">
-                        <li class="project-item active" data-filter-item data-category="news">
-                            <a href="https://zhach-news-summarizer.hf.space/">
-                                <figure class="project-img">
-                                    <div class="project-item-icon-box">
-                                        <i class="fa-regular fa-eye"></i>
-                                    </div>
-
-                                    <img src="https://img.freepik.com/premium-vector/news-concept-illustration-flat-design_23-2148268772.jpg?w=300"
-                                        alt="news project img" loading="lazy" />
-                                </figure>
-
-                                <h3 class="project-title">
-                                    News Summarizer
-                                </h3>
-
-                                <p class="project-category">News</p>
-                            </a>
-                        </li>
-
-                        <li class="project-item active" data-filter-item data-category="ai/ml">
-                            <a href="https://aleth.onrender.com/">
-                                <figure class="project-img">
-                                    <div class="project-item-icon-box">
-                                        <i class="fa-regular fa-eye"></i>
-                                    </div>
-
-                                    <img src="./images/alethia.jpeg" alt="aleth project img" loading="lazy" />
-                                </figure>
-
-                                <h3 class="project-title">
-                                    Aleth
-                                </h3>
-
-                                <p class="project-category">News</p>
-                            </a>
-                        </li>
-
-                        <li class="project-item active" data-filter-item data-category="ai/ml">
-                            <a href="https://zhach-calorie-counter.hf.space">
-                                <figure class="project-img">
-                                    <div class="project-item-icon-box">
-                                        <i class="fa-regular fa-eye"></i>
-                                    </div>
-
-                                    <img src="./images/calories.png" alt="calories project img" loading="lazy" />
-                                </figure>
-
-                                <h3 class="project-title">
-                                    Calorie Counter
-                                </h3>
-
-                                <p class="project-category">AI/ML</p>
-                            </a>
-                        </li>
-
-                        <li class="project-item active" data-filter-item data-category="fun">
-                            <a href="https://perlinvisualization.onrender.com/">
-                                <figure class="project-img">
-                                    <div class="project-item-icon-box">
-                                        <i class="fa-regular fa-eye"></i>
-                                    </div>
-
-                                    <img src="./images/perlinnoise.png" alt="perlin noise project img" loading="lazy" />
-                                </figure>
-
-                                <h3 class="project-title">Perlin Noise</h3>
-
-                                <p class="project-category">Fun</p>
-                            </a>
-                        </li>
-
-                        <li class="project-item active" data-filter-item data-category="fun">
-                            <a href="https://zhach-gol.onrender.com/">
-                                <figure class="project-img">
-                                    <div class="project-item-icon-box">
-                                        <i class="fa-regular fa-eye"></i>
-                                    </div>
-
-                                    <img src="./images/conway.png" alt="conway project img" loading="lazy" />
-                                </figure>
-
-                                <h3 class="project-title">
-                                    Conway's Game of Life
-                                </h3>
-
-                                <p class="project-category">Fun</p>
-                            </a>
-                        </li>
-                        <li class="project-item active" data-filter-item data-category="fun">
-                            <a href="https://tech-debt-sim.onrender.com/">
-                                <figure class="project-img">
-                                    <div class="project-item-icon-box">
-                                        <i class="fa-regular fa-eye"></i>
-                                    </div>
-
-                                    <img src="./images/tech_debt.png" alt="techdebt project img" loading="lazy" />
-                                </figure>
-
-                                <h3 class="project-title">
-                                    Tech Debt Simulator
-                                </h3>
-
-                                <p class="project-category">Sims</p>
-                            </a>
-                        </li>
-                    </ul>
-                </section>
-            </article>
-
-            <!--- #CONTACT-->
-
-            <article class="contact" data-page="contact">
-                <header>
-                    <h2 class="h2 article-title">Contact</h2>
-                </header>
-
-                <section class="mapbox" data-mapbox>
-                    <figure>
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d91923.30501796128!2d-74.0516320379617!3d40.75903219736855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2588f046ee661%3A0xa0b3281fcecc08c!2sManhattan%2C%20New%20York%2C%20NY!5e1!3m2!1sen!2sus!4v1756510541860!5m2!1sen!2sus"
-                            width="400" height="300" style="border: 0" allowfullscreen="" loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </figure>
-                </section>
-
-                <section id="contact">
-                    <h3 class="form-title">Get in Touch</h3>
-                    <div id="contact-form">
-                        <form action="https://formspree.io/f/xknpklwr" class="form" method="POST">
-                            <label>
-                                <input type="text" class="form-input" name="_replyto" placeholder="Your email:" />
-                            </label>
-                            <label>
-                                <textarea name="message" class="form-input" placeholder="Your message:"></textarea>
-                            </label>
-
-                            <!-- your other form fields go here -->
-
-                            <button type="submit" class="form-btn">
-                                Send
-                            </button>
-                        </form>
-                    </div>
-                    <!-- End #contact-form -->
-                </section>
-                <!-- End #contact -->
-            </article>
+  <header class="site-header" id="site-header">
+    <div class="header-inner">
+      <a href="#hero" class="header-logo">Zhachory Volker</a>
+      <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+          <li><a href="https://zhach.news" class="nav-link nav-link--external" target="_blank" rel="noopener">Blog ↗</a></li>
+        </ul>
+      </nav>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section id="hero" class="hero">
+      <div class="hero-inner">
+        <p class="hero-eyebrow">Staff Software Engineer</p>
+        <h1 class="hero-name">Zhachory<br>Volker</h1>
+        <p class="hero-value">Building intelligent systems at scale — from search ranking at YouTube to ML infrastructure at Rokt.</p>
+        <div class="hero-cta">
+          <a href="./ZhachResume_20260416.pdf" class="btn btn--primary" target="_blank" rel="noopener">View Resume</a>
+          <a href="#contact" class="btn btn--secondary">Get in Touch</a>
         </div>
-    </main>
+        <div class="hero-links">
+          <a href="https://github.com/Zhachory1" class="hero-link" target="_blank" rel="noopener">GitHub</a>
+          <span aria-hidden="true">·</span>
+          <a href="https://www.linkedin.com/in/zhachory1/" class="hero-link" target="_blank" rel="noopener">LinkedIn</a>
+          <span aria-hidden="true">·</span>
+          <a href="mailto:me@zhachory.com" class="hero-link">me@zhachory.com</a>
+        </div>
+      </div>
+    </section>
 
-    <!--
-    - custom js link
-  -->
-    <script src="./js/scripts.min.js"></script>
+    <!-- ABOUT -->
+    <section id="about" class="section about">
+      <div class="section-inner">
+        <h2 class="section-title">About</h2>
+        <div class="about-grid">
+          <div class="about-text">
+            <p>I've spent 10+ years building ML systems, search ranking, and recommendation engines at YouTube, Google, and Rokt. The systems I've worked on serve billions of queries and the infrastructure choices I've made have saved millions of dollars.</p>
+            <p>My focus is the intersection of ML engineering and product impact — turning research into production at scale. I care about responsible AI, computational journalism, and the systems that shape how people find and trust information.</p>
+            <p>I'm looking for staff or principal engineer roles leading technical strategy on AI/ML-intensive systems. Based in New York City.</p>
+          </div>
+          <div class="about-image">
+            <img src="./images/profile.png" alt="Zhachory Volker" />
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <!--
-    - ionicon link
-  -->
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section experience">
+      <div class="section-inner">
+        <div class="section-header">
+          <h2 class="section-title">Experience</h2>
+          <a href="./ZhachResume_20260416.pdf" class="resume-link" target="_blank" rel="noopener">PDF Resume ↗</a>
+        </div>
+
+        <ol class="experience-list">
+          <li class="experience-item">
+            <div class="exp-meta">
+              <span class="exp-date">Oct 2025 — Present</span>
+              <span class="exp-company">Rokt</span>
+            </div>
+            <div class="exp-content">
+              <h3 class="exp-title">Staff Software Engineer</h3>
+              <p>Leading and mentoring a team of 15 engineers on the Audience and Bidding team. Architected and deployed a dynamic ranking layer for on-the-fly audience generation, scaling revenue from generated audiences by 120%. Reduced ML audience generation pipeline costs by 75% (~$750k annually) via migration to a two-tower infrastructure with a robust data refresh system. Spearheaded an org-wide AI integration initiative improving Developer Satisfaction by 25%.</p>
+            </div>
+          </li>
+
+          <li class="experience-item">
+            <div class="exp-meta">
+              <span class="exp-date">Mar 2018 — Sep 2025</span>
+              <span class="exp-company">YouTube / Google</span>
+            </div>
+            <div class="exp-content">
+              <h3 class="exp-title">Senior Software Engineer, YouTube Search</h3>
+              <p>Designed a unified ranking framework boosting Search Active Users by 2% and CTR by 25% across multiple features in a single launch. Led the YouTube Search News experience with a team of 4, increasing News CTR by 38% and daily News Searches by 10% (~8M queries) through clustering algorithms and NLP models. Led a resource optimization project achieving 60% compute reduction (estimated $1.8M annually).</p>
+            </div>
+          </li>
+
+          <li class="experience-item">
+            <div class="exp-meta">
+              <span class="exp-date">Mar 2017 — Mar 2018</span>
+              <span class="exp-company">Google Research</span>
+            </div>
+            <div class="exp-content">
+              <h3 class="exp-title">Software Engineering Resident</h3>
+              <p>Applied NLP and ML (RNNs, CNNs, Decision Trees) to 10,000+ articles for Google's fact-checking corpus, results still surfaced on Google today. Built MapReduce pipelines in C++ utilized by six major news publishers. Developed label propagation and semi-supervised learning pipelines on large-scale graphs, increasing library adoption by 8%.</p>
+            </div>
+          </li>
+
+          <li class="experience-item experience-item--minor">
+            <div class="exp-meta">
+              <span class="exp-date">May 2015 — Mar 2017</span>
+              <span class="exp-company">Ericsson</span>
+            </div>
+            <div class="exp-content">
+              <h3 class="exp-title">System Data & Performance Intern</h3>
+              <p>Full-stack development in Polymer, Python, and Java. Data mining pipelines contributing to a 12% reduction in site risk incidents.</p>
+            </div>
+          </li>
+        </ol>
+
+        <div class="education">
+          <h3 class="subsection-title">Education</h3>
+          <div class="edu-item">
+            <div class="exp-meta">
+              <span class="exp-date">2013 — 2018</span>
+              <span class="exp-company">University of North Texas</span>
+            </div>
+            <p class="edu-degree">B.S. Computer Science — Dean's List</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section projects">
+      <div class="section-inner">
+        <h2 class="section-title">Projects</h2>
+        <ul class="project-grid">
+
+          <li class="project-card">
+            <a href="https://zhach-news-summarizer.hf.space/" target="_blank" rel="noopener" class="project-link">
+              <div class="project-img-wrap">
+                <img src="./images/report.png" alt="News Summarizer" loading="lazy" />
+              </div>
+              <div class="project-info">
+                <h3 class="project-name">News Summarizer</h3>
+                <p class="project-desc">AI-powered news aggregation that clusters and summarizes top stories using NLP models.</p>
+                <ul class="project-tags">
+                  <li>Python</li><li>NLP</li><li>HuggingFace</li>
+                </ul>
+              </div>
+            </a>
+          </li>
+
+          <li class="project-card">
+            <a href="https://aleth.onrender.com/" target="_blank" rel="noopener" class="project-link">
+              <div class="project-img-wrap">
+                <img src="./images/alethia.jpeg" alt="Aleth" loading="lazy" />
+              </div>
+              <div class="project-info">
+                <h3 class="project-name">Aleth</h3>
+                <p class="project-desc">ML-powered news credibility analyzer that evaluates source reliability and identifies bias patterns.</p>
+                <ul class="project-tags">
+                  <li>ML</li><li>Python</li><li>News</li>
+                </ul>
+              </div>
+            </a>
+          </li>
+
+          <li class="project-card">
+            <a href="https://zhach-calorie-counter.hf.space" target="_blank" rel="noopener" class="project-link">
+              <div class="project-img-wrap">
+                <img src="./images/calories.png" alt="Calorie Counter" loading="lazy" />
+              </div>
+              <div class="project-info">
+                <h3 class="project-name">Calorie Counter</h3>
+                <p class="project-desc">Computer vision model that identifies food items from photos and estimates nutritional content.</p>
+                <ul class="project-tags">
+                  <li>Computer Vision</li><li>PyTorch</li>
+                </ul>
+              </div>
+            </a>
+          </li>
+
+          <li class="project-card">
+            <a href="https://tech-debt-sim.onrender.com/" target="_blank" rel="noopener" class="project-link">
+              <div class="project-img-wrap">
+                <img src="./images/tech_debt.png" alt="Tech Debt Simulator" loading="lazy" />
+              </div>
+              <div class="project-info">
+                <h3 class="project-name">Tech Debt Simulator</h3>
+                <p class="project-desc">Interactive simulation modeling how technical debt accumulates and compounds over a software project's lifetime.</p>
+                <ul class="project-tags">
+                  <li>JavaScript</li><li>Simulation</li>
+                </ul>
+              </div>
+            </a>
+          </li>
+
+          <li class="project-card">
+            <a href="https://perlinvisualization.onrender.com/" target="_blank" rel="noopener" class="project-link">
+              <div class="project-img-wrap">
+                <img src="./images/perlinnoise.png" alt="Perlin Noise" loading="lazy" />
+              </div>
+              <div class="project-info">
+                <h3 class="project-name">Perlin Noise</h3>
+                <p class="project-desc">Real-time generative noise visualization with interactive parameter controls.</p>
+                <ul class="project-tags">
+                  <li>JavaScript</li><li>Canvas</li><li>Generative</li>
+                </ul>
+              </div>
+            </a>
+          </li>
+
+          <li class="project-card">
+            <a href="https://zhach-gol.onrender.com/" target="_blank" rel="noopener" class="project-link">
+              <div class="project-img-wrap">
+                <img src="./images/conway.png" alt="Conway's Game of Life" loading="lazy" />
+              </div>
+              <div class="project-info">
+                <h3 class="project-name">Conway's Game of Life</h3>
+                <p class="project-desc">Optimized cellular automaton implementation with interactive controls and pattern presets.</p>
+                <ul class="project-tags">
+                  <li>JavaScript</li><li>Canvas</li>
+                </ul>
+              </div>
+            </a>
+          </li>
+
+        </ul>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section skills">
+      <div class="section-inner">
+        <h2 class="section-title">Skills</h2>
+        <dl class="skills-grid">
+          <div class="skill-group">
+            <dt>Languages</dt>
+            <dd>Python, C++, Go, Java, JavaScript</dd>
+          </div>
+          <div class="skill-group">
+            <dt>ML & AI</dt>
+            <dd>PyTorch, TensorFlow, Keras, LLMs, NLP, Ranking Systems, Recommender Systems, Two-Tower Architecture</dd>
+          </div>
+          <div class="skill-group">
+            <dt>Data</dt>
+            <dd>SQL, BigQuery, Spark, MapReduce, ETL, Embeddings</dd>
+          </div>
+          <div class="skill-group">
+            <dt>Infrastructure</dt>
+            <dd>GCP, AWS, Kubernetes, Docker, Terraform, Borg</dd>
+          </div>
+          <div class="skill-group">
+            <dt>Search</dt>
+            <dd>Information Retrieval, Query Understanding, Embedding Search, Indexing</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section contact">
+      <div class="section-inner">
+        <h2 class="section-title">Get in Touch</h2>
+        <p class="contact-intro">Open to staff and principal engineer opportunities in AI/ML. Email me directly or use the form.</p>
+        <div class="contact-grid">
+          <div class="contact-info">
+            <p class="contact-email"><a href="mailto:me@zhachory.com">me@zhachory.com</a></p>
+            <ul class="contact-links">
+              <li><a href="https://github.com/Zhachory1" target="_blank" rel="noopener">GitHub ↗</a></li>
+              <li><a href="https://www.linkedin.com/in/zhachory1/" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+              <li><a href="https://zhach.news" target="_blank" rel="noopener">Blog ↗</a></li>
+              <li><a href="./ZhachResume_20260416.pdf" target="_blank" rel="noopener">Resume PDF ↗</a></li>
+            </ul>
+          </div>
+          <form action="https://formspree.io/f/xknpklwr" method="POST" class="contact-form">
+            <label for="contact-email-input">Your email</label>
+            <input type="email" id="contact-email-input" name="_replyto" placeholder="you@example.com" required />
+            <label for="contact-message">Message</label>
+            <textarea id="contact-message" name="message" rows="5" placeholder="What's on your mind?" required></textarea>
+            <button type="submit" class="btn btn--primary">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>Zhachory Volker · New York City</p>
+      <p><a href="mailto:me@zhachory.com">me@zhachory.com</a></p>
+    </div>
+  </footer>
+
+  <script src="./js/scripts.min.js"></script>
+
 </body>
-
 </html>
