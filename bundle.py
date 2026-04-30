@@ -23,7 +23,7 @@ FILES=[
   "js/*.js",  # we will be minimizing javascript files ourselves
   "libs/**/*",
   "images/*",  # We expect a flat directory of images
-  "ZhachResume_20250612.pdf",  # The main star! I need me resume here
+  "ZhachResume_20260416.pdf",  # The main star! I need me resume here
 ]
 
 GTAG_URL = Template("https://www.googletagmanager.com/gtag/js?id=$gtagid")
