@@ -75,13 +75,13 @@ h1, h2, h3 {
 }
 
 .logo-img {
-  height: 54px;
+  height: 64px;
   width: auto;
   display: block;
 }
 
 .logo-img--footer {
-  height: 44px;
+  height: 52px;
 }
 
 .main-nav ul {
