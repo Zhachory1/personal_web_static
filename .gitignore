@@ -73,6 +73,9 @@ pyvenv.cfg
 env/
 venv/
 
+# Local browser QA artifacts
+.playwright-mcp/
+
 # Public static files (these will be rebuilt as needed)
 public/
 
