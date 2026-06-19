@@ -1,6 +1,6 @@
 # Portfolio Site Redesign Reference
 
-*Research compiled April 2026. Used as reference for redesign of zhachory.com.*
+*Research compiled April 2026. Used as reference for redesign of zhach.me.*
 
 ---
 
