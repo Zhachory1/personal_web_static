@@ -23,6 +23,14 @@ npm test
 - `npm run serve` serves `public/` at <http://localhost:8000>.
 - `npm test` runs static QA for local links/images, viewport metadata, social metadata, and mobile navigation markup.
 
-## Status
+## Migration / deploy workflow
 
-Migrating to another service, but this repo remains the source for the static portfolio site.
+This repo remains the source of truth for the static portfolio until the migration is complete.
+
+1. Edit files in `src/`.
+2. Run `npm test`.
+3. Run `npm run build` to regenerate `public/` for local preview/deploy packaging.
+4. Serve with `npm run serve` and verify the homepage/resume links.
+5. When a new host replaces this repo, archive it by freezing `src/`, documenting the target host here, and disabling any old deploy hooks.
+
+Generated binaries such as the PyInstaller `bundle` executable are intentionally not tracked.

@@ -52,6 +52,7 @@ share/python-wheels/
 .installed.cfg
 
 # Binary files (one I specifically don't want checked in)
+/bundle
 *.bin
 *.exe
 *.dll
