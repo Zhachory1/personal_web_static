@@ -47,6 +47,7 @@ Highly accomplished Staff Software Engineer with over 13 years of full-stack dev
 - **[Autopraxis](https://github.com/Zhachory1/autopraxis)** — Self-improving workflow skills for AI agents, turning messy goals into grounded briefs, reviewed plans, shipped work, and measured learning loops.
 - **[agent-fleet](https://github.com/Zhachory1/agent-fleet)** — A portable council of specialist review personas for high-stakes engineering decisions. Orthogonal reviewers debate and synthesize one decision-grade answer with ranked issues and named dissents.
 - **[ZBrain](https://github.com/Zhachory1/ZBrain)** — Local-first markdown/doc RAG for private work context. SQLite/FTS5 indexing, local embeddings via Ollama, and a stdio MCP server, fully local and auditable.
+- **[kns](https://github.com/Zhachory1/kns)** — Hierarchical RAG with DNS-like resolution across private, team, and company knowledge zones.
 
 ## Education
 
