@@ -4,7 +4,11 @@
     <priority>1.00</priority>
   </url>
   <url>
-    <loc>https://zhach.me/ZhachResume_20260416.pdf</loc>
+    <loc>https://zhach.me/ZhachResume_20260822.pdf</loc>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://zhach.me/resume.md</loc>
     <priority>0.80</priority>
   </url>
 </urlset>
