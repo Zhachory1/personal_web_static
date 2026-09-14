@@ -23,7 +23,7 @@ FILES=[
   "js/*.js",  # we will be minimizing javascript files ourselves
   "libs/**/*",
   "images/*",  # We expect a flat directory of images
-  "ZhachResume_20260822.pdf",  # The main star! I need me resume here
+  "ZhachResume_20260914.pdf",  # The main star! I need me resume here
   "resume.md",  # Markdown resume, served alongside the PDF
 ]
 
